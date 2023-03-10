@@ -6,10 +6,8 @@ app = FastAPI()
 class Msg(BaseModel):
     msg: str
 
-@app.post("/")
-async def execute_command(command: dict):
-    if command:
-        print("Received Message: ", command)
+@app.get("/")
+async def execute_command():
     return {"status": "success"}
 
 
