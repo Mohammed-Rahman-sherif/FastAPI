@@ -7,7 +7,7 @@ class Msg(BaseModel):
     msg: str
 
 @app.get("/")
-async def execute_command():
+async def demo_get():
     return {"status": "success"}
 
 
